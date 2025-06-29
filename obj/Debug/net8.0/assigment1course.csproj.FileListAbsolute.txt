@@ -1,0 +1,14 @@
+C:\Users\mohaned\source\repos\assigment1course\bin\Debug\net8.0\assigment1course.exe
+C:\Users\mohaned\source\repos\assigment1course\bin\Debug\net8.0\assigment1course.deps.json
+C:\Users\mohaned\source\repos\assigment1course\bin\Debug\net8.0\assigment1course.runtimeconfig.json
+C:\Users\mohaned\source\repos\assigment1course\bin\Debug\net8.0\assigment1course.dll
+C:\Users\mohaned\source\repos\assigment1course\bin\Debug\net8.0\assigment1course.pdb
+C:\Users\mohaned\source\repos\assigment1course\obj\Debug\net8.0\assigment1course.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohaned\source\repos\assigment1course\obj\Debug\net8.0\assigment1course.AssemblyInfoInputs.cache
+C:\Users\mohaned\source\repos\assigment1course\obj\Debug\net8.0\assigment1course.AssemblyInfo.cs
+C:\Users\mohaned\source\repos\assigment1course\obj\Debug\net8.0\assigment1course.csproj.CoreCompileInputs.cache
+C:\Users\mohaned\source\repos\assigment1course\obj\Debug\net8.0\assigment1course.dll
+C:\Users\mohaned\source\repos\assigment1course\obj\Debug\net8.0\refint\assigment1course.dll
+C:\Users\mohaned\source\repos\assigment1course\obj\Debug\net8.0\assigment1course.pdb
+C:\Users\mohaned\source\repos\assigment1course\obj\Debug\net8.0\assigment1course.genruntimeconfig.cache
+C:\Users\mohaned\source\repos\assigment1course\obj\Debug\net8.0\ref\assigment1course.dll
