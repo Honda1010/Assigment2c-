@@ -1,0 +1,14 @@
+C:\Users\mohaned\source\repos\Ass4Course\bin\Debug\net8.0\Ass4Course.exe
+C:\Users\mohaned\source\repos\Ass4Course\bin\Debug\net8.0\Ass4Course.deps.json
+C:\Users\mohaned\source\repos\Ass4Course\bin\Debug\net8.0\Ass4Course.runtimeconfig.json
+C:\Users\mohaned\source\repos\Ass4Course\bin\Debug\net8.0\Ass4Course.dll
+C:\Users\mohaned\source\repos\Ass4Course\bin\Debug\net8.0\Ass4Course.pdb
+C:\Users\mohaned\source\repos\Ass4Course\obj\Debug\net8.0\Ass4Course.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohaned\source\repos\Ass4Course\obj\Debug\net8.0\Ass4Course.AssemblyInfoInputs.cache
+C:\Users\mohaned\source\repos\Ass4Course\obj\Debug\net8.0\Ass4Course.AssemblyInfo.cs
+C:\Users\mohaned\source\repos\Ass4Course\obj\Debug\net8.0\Ass4Course.csproj.CoreCompileInputs.cache
+C:\Users\mohaned\source\repos\Ass4Course\obj\Debug\net8.0\Ass4Course.dll
+C:\Users\mohaned\source\repos\Ass4Course\obj\Debug\net8.0\refint\Ass4Course.dll
+C:\Users\mohaned\source\repos\Ass4Course\obj\Debug\net8.0\Ass4Course.pdb
+C:\Users\mohaned\source\repos\Ass4Course\obj\Debug\net8.0\Ass4Course.genruntimeconfig.cache
+C:\Users\mohaned\source\repos\Ass4Course\obj\Debug\net8.0\ref\Ass4Course.dll
