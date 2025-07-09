@@ -1,0 +1,14 @@
+C:\Users\mohaned\source\repos\Ass5Course\bin\Debug\net8.0\Ass5Course.exe
+C:\Users\mohaned\source\repos\Ass5Course\bin\Debug\net8.0\Ass5Course.deps.json
+C:\Users\mohaned\source\repos\Ass5Course\bin\Debug\net8.0\Ass5Course.runtimeconfig.json
+C:\Users\mohaned\source\repos\Ass5Course\bin\Debug\net8.0\Ass5Course.dll
+C:\Users\mohaned\source\repos\Ass5Course\bin\Debug\net8.0\Ass5Course.pdb
+C:\Users\mohaned\source\repos\Ass5Course\obj\Debug\net8.0\Ass5Course.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohaned\source\repos\Ass5Course\obj\Debug\net8.0\Ass5Course.AssemblyInfoInputs.cache
+C:\Users\mohaned\source\repos\Ass5Course\obj\Debug\net8.0\Ass5Course.AssemblyInfo.cs
+C:\Users\mohaned\source\repos\Ass5Course\obj\Debug\net8.0\Ass5Course.csproj.CoreCompileInputs.cache
+C:\Users\mohaned\source\repos\Ass5Course\obj\Debug\net8.0\Ass5Course.dll
+C:\Users\mohaned\source\repos\Ass5Course\obj\Debug\net8.0\refint\Ass5Course.dll
+C:\Users\mohaned\source\repos\Ass5Course\obj\Debug\net8.0\Ass5Course.pdb
+C:\Users\mohaned\source\repos\Ass5Course\obj\Debug\net8.0\Ass5Course.genruntimeconfig.cache
+C:\Users\mohaned\source\repos\Ass5Course\obj\Debug\net8.0\ref\Ass5Course.dll
