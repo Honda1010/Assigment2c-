@@ -1,0 +1,14 @@
+C:\Users\mohaned\source\repos\Ass6Course\bin\Debug\net8.0\Ass6Course.exe
+C:\Users\mohaned\source\repos\Ass6Course\bin\Debug\net8.0\Ass6Course.deps.json
+C:\Users\mohaned\source\repos\Ass6Course\bin\Debug\net8.0\Ass6Course.runtimeconfig.json
+C:\Users\mohaned\source\repos\Ass6Course\bin\Debug\net8.0\Ass6Course.dll
+C:\Users\mohaned\source\repos\Ass6Course\bin\Debug\net8.0\Ass6Course.pdb
+C:\Users\mohaned\source\repos\Ass6Course\obj\Debug\net8.0\Ass6Course.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohaned\source\repos\Ass6Course\obj\Debug\net8.0\Ass6Course.AssemblyInfoInputs.cache
+C:\Users\mohaned\source\repos\Ass6Course\obj\Debug\net8.0\Ass6Course.AssemblyInfo.cs
+C:\Users\mohaned\source\repos\Ass6Course\obj\Debug\net8.0\Ass6Course.csproj.CoreCompileInputs.cache
+C:\Users\mohaned\source\repos\Ass6Course\obj\Debug\net8.0\Ass6Course.dll
+C:\Users\mohaned\source\repos\Ass6Course\obj\Debug\net8.0\refint\Ass6Course.dll
+C:\Users\mohaned\source\repos\Ass6Course\obj\Debug\net8.0\Ass6Course.pdb
+C:\Users\mohaned\source\repos\Ass6Course\obj\Debug\net8.0\Ass6Course.genruntimeconfig.cache
+C:\Users\mohaned\source\repos\Ass6Course\obj\Debug\net8.0\ref\Ass6Course.dll
