@@ -1,0 +1,14 @@
+C:\Users\mohaned\source\repos\OPPAssCourse\bin\Debug\net8.0\OPPAssCourse.exe
+C:\Users\mohaned\source\repos\OPPAssCourse\bin\Debug\net8.0\OPPAssCourse.deps.json
+C:\Users\mohaned\source\repos\OPPAssCourse\bin\Debug\net8.0\OPPAssCourse.runtimeconfig.json
+C:\Users\mohaned\source\repos\OPPAssCourse\bin\Debug\net8.0\OPPAssCourse.dll
+C:\Users\mohaned\source\repos\OPPAssCourse\bin\Debug\net8.0\OPPAssCourse.pdb
+C:\Users\mohaned\source\repos\OPPAssCourse\obj\Debug\net8.0\OPPAssCourse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohaned\source\repos\OPPAssCourse\obj\Debug\net8.0\OPPAssCourse.AssemblyInfoInputs.cache
+C:\Users\mohaned\source\repos\OPPAssCourse\obj\Debug\net8.0\OPPAssCourse.AssemblyInfo.cs
+C:\Users\mohaned\source\repos\OPPAssCourse\obj\Debug\net8.0\OPPAssCourse.csproj.CoreCompileInputs.cache
+C:\Users\mohaned\source\repos\OPPAssCourse\obj\Debug\net8.0\OPPAssCourse.dll
+C:\Users\mohaned\source\repos\OPPAssCourse\obj\Debug\net8.0\refint\OPPAssCourse.dll
+C:\Users\mohaned\source\repos\OPPAssCourse\obj\Debug\net8.0\OPPAssCourse.pdb
+C:\Users\mohaned\source\repos\OPPAssCourse\obj\Debug\net8.0\OPPAssCourse.genruntimeconfig.cache
+C:\Users\mohaned\source\repos\OPPAssCourse\obj\Debug\net8.0\ref\OPPAssCourse.dll
