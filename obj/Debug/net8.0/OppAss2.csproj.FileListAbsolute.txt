@@ -1,0 +1,14 @@
+C:\Users\mohaned\source\repos\OppAss2\bin\Debug\net8.0\OppAss2.exe
+C:\Users\mohaned\source\repos\OppAss2\bin\Debug\net8.0\OppAss2.deps.json
+C:\Users\mohaned\source\repos\OppAss2\bin\Debug\net8.0\OppAss2.runtimeconfig.json
+C:\Users\mohaned\source\repos\OppAss2\bin\Debug\net8.0\OppAss2.dll
+C:\Users\mohaned\source\repos\OppAss2\bin\Debug\net8.0\OppAss2.pdb
+C:\Users\mohaned\source\repos\OppAss2\obj\Debug\net8.0\OppAss2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohaned\source\repos\OppAss2\obj\Debug\net8.0\OppAss2.AssemblyInfoInputs.cache
+C:\Users\mohaned\source\repos\OppAss2\obj\Debug\net8.0\OppAss2.AssemblyInfo.cs
+C:\Users\mohaned\source\repos\OppAss2\obj\Debug\net8.0\OppAss2.csproj.CoreCompileInputs.cache
+C:\Users\mohaned\source\repos\OppAss2\obj\Debug\net8.0\OppAss2.dll
+C:\Users\mohaned\source\repos\OppAss2\obj\Debug\net8.0\refint\OppAss2.dll
+C:\Users\mohaned\source\repos\OppAss2\obj\Debug\net8.0\OppAss2.pdb
+C:\Users\mohaned\source\repos\OppAss2\obj\Debug\net8.0\OppAss2.genruntimeconfig.cache
+C:\Users\mohaned\source\repos\OppAss2\obj\Debug\net8.0\ref\OppAss2.dll
