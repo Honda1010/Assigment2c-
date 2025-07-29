@@ -1,0 +1,14 @@
+C:\Users\mohaned\source\repos\OppAss3\bin\Debug\net8.0\OppAss3.exe
+C:\Users\mohaned\source\repos\OppAss3\bin\Debug\net8.0\OppAss3.deps.json
+C:\Users\mohaned\source\repos\OppAss3\bin\Debug\net8.0\OppAss3.runtimeconfig.json
+C:\Users\mohaned\source\repos\OppAss3\bin\Debug\net8.0\OppAss3.dll
+C:\Users\mohaned\source\repos\OppAss3\bin\Debug\net8.0\OppAss3.pdb
+C:\Users\mohaned\source\repos\OppAss3\obj\Debug\net8.0\OppAss3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohaned\source\repos\OppAss3\obj\Debug\net8.0\OppAss3.AssemblyInfoInputs.cache
+C:\Users\mohaned\source\repos\OppAss3\obj\Debug\net8.0\OppAss3.AssemblyInfo.cs
+C:\Users\mohaned\source\repos\OppAss3\obj\Debug\net8.0\OppAss3.csproj.CoreCompileInputs.cache
+C:\Users\mohaned\source\repos\OppAss3\obj\Debug\net8.0\OppAss3.dll
+C:\Users\mohaned\source\repos\OppAss3\obj\Debug\net8.0\refint\OppAss3.dll
+C:\Users\mohaned\source\repos\OppAss3\obj\Debug\net8.0\OppAss3.pdb
+C:\Users\mohaned\source\repos\OppAss3\obj\Debug\net8.0\OppAss3.genruntimeconfig.cache
+C:\Users\mohaned\source\repos\OppAss3\obj\Debug\net8.0\ref\OppAss3.dll
