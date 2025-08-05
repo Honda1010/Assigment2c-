@@ -1,0 +1,14 @@
+C:\Users\mohaned\source\repos\ADVAss1\bin\Debug\net8.0\ADVAss1.exe
+C:\Users\mohaned\source\repos\ADVAss1\bin\Debug\net8.0\ADVAss1.deps.json
+C:\Users\mohaned\source\repos\ADVAss1\bin\Debug\net8.0\ADVAss1.runtimeconfig.json
+C:\Users\mohaned\source\repos\ADVAss1\bin\Debug\net8.0\ADVAss1.dll
+C:\Users\mohaned\source\repos\ADVAss1\bin\Debug\net8.0\ADVAss1.pdb
+C:\Users\mohaned\source\repos\ADVAss1\obj\Debug\net8.0\ADVAss1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohaned\source\repos\ADVAss1\obj\Debug\net8.0\ADVAss1.AssemblyInfoInputs.cache
+C:\Users\mohaned\source\repos\ADVAss1\obj\Debug\net8.0\ADVAss1.AssemblyInfo.cs
+C:\Users\mohaned\source\repos\ADVAss1\obj\Debug\net8.0\ADVAss1.csproj.CoreCompileInputs.cache
+C:\Users\mohaned\source\repos\ADVAss1\obj\Debug\net8.0\ADVAss1.dll
+C:\Users\mohaned\source\repos\ADVAss1\obj\Debug\net8.0\refint\ADVAss1.dll
+C:\Users\mohaned\source\repos\ADVAss1\obj\Debug\net8.0\ADVAss1.pdb
+C:\Users\mohaned\source\repos\ADVAss1\obj\Debug\net8.0\ADVAss1.genruntimeconfig.cache
+C:\Users\mohaned\source\repos\ADVAss1\obj\Debug\net8.0\ref\ADVAss1.dll
