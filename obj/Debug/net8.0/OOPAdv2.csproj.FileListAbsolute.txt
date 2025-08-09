@@ -1,0 +1,14 @@
+C:\Users\mohaned\source\repos\OOPAdv2\bin\Debug\net8.0\OOPAdv2.exe
+C:\Users\mohaned\source\repos\OOPAdv2\bin\Debug\net8.0\OOPAdv2.deps.json
+C:\Users\mohaned\source\repos\OOPAdv2\bin\Debug\net8.0\OOPAdv2.runtimeconfig.json
+C:\Users\mohaned\source\repos\OOPAdv2\bin\Debug\net8.0\OOPAdv2.dll
+C:\Users\mohaned\source\repos\OOPAdv2\bin\Debug\net8.0\OOPAdv2.pdb
+C:\Users\mohaned\source\repos\OOPAdv2\obj\Debug\net8.0\OOPAdv2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohaned\source\repos\OOPAdv2\obj\Debug\net8.0\OOPAdv2.AssemblyInfoInputs.cache
+C:\Users\mohaned\source\repos\OOPAdv2\obj\Debug\net8.0\OOPAdv2.AssemblyInfo.cs
+C:\Users\mohaned\source\repos\OOPAdv2\obj\Debug\net8.0\OOPAdv2.csproj.CoreCompileInputs.cache
+C:\Users\mohaned\source\repos\OOPAdv2\obj\Debug\net8.0\OOPAdv2.dll
+C:\Users\mohaned\source\repos\OOPAdv2\obj\Debug\net8.0\refint\OOPAdv2.dll
+C:\Users\mohaned\source\repos\OOPAdv2\obj\Debug\net8.0\OOPAdv2.pdb
+C:\Users\mohaned\source\repos\OOPAdv2\obj\Debug\net8.0\OOPAdv2.genruntimeconfig.cache
+C:\Users\mohaned\source\repos\OOPAdv2\obj\Debug\net8.0\ref\OOPAdv2.dll
