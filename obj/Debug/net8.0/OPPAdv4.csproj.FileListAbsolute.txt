@@ -1,0 +1,14 @@
+C:\Users\mohaned\source\repos\OPPAdv4\bin\Debug\net8.0\OPPAdv4.exe
+C:\Users\mohaned\source\repos\OPPAdv4\bin\Debug\net8.0\OPPAdv4.deps.json
+C:\Users\mohaned\source\repos\OPPAdv4\bin\Debug\net8.0\OPPAdv4.runtimeconfig.json
+C:\Users\mohaned\source\repos\OPPAdv4\bin\Debug\net8.0\OPPAdv4.dll
+C:\Users\mohaned\source\repos\OPPAdv4\bin\Debug\net8.0\OPPAdv4.pdb
+C:\Users\mohaned\source\repos\OPPAdv4\obj\Debug\net8.0\OPPAdv4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohaned\source\repos\OPPAdv4\obj\Debug\net8.0\OPPAdv4.AssemblyInfoInputs.cache
+C:\Users\mohaned\source\repos\OPPAdv4\obj\Debug\net8.0\OPPAdv4.AssemblyInfo.cs
+C:\Users\mohaned\source\repos\OPPAdv4\obj\Debug\net8.0\OPPAdv4.csproj.CoreCompileInputs.cache
+C:\Users\mohaned\source\repos\OPPAdv4\obj\Debug\net8.0\OPPAdv4.dll
+C:\Users\mohaned\source\repos\OPPAdv4\obj\Debug\net8.0\refint\OPPAdv4.dll
+C:\Users\mohaned\source\repos\OPPAdv4\obj\Debug\net8.0\OPPAdv4.pdb
+C:\Users\mohaned\source\repos\OPPAdv4\obj\Debug\net8.0\OPPAdv4.genruntimeconfig.cache
+C:\Users\mohaned\source\repos\OPPAdv4\obj\Debug\net8.0\ref\OPPAdv4.dll
