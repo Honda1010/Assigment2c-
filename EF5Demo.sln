@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseFirst", "DataBaseFirst\DataBaseFirst.csproj", "{DC10416B-F24F-A5EE-95D0-8E9FA34F9C7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingInhertance", "MappingInheritance\MappingInhertance.csproj", "{7EC1241A-0055-49D5-5D16-F12EA52221E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC10416B-F24F-A5EE-95D0-8E9FA34F9C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC10416B-F24F-A5EE-95D0-8E9FA34F9C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC10416B-F24F-A5EE-95D0-8E9FA34F9C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC10416B-F24F-A5EE-95D0-8E9FA34F9C7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC1241A-0055-49D5-5D16-F12EA52221E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC1241A-0055-49D5-5D16-F12EA52221E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC1241A-0055-49D5-5D16-F12EA52221E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC1241A-0055-49D5-5D16-F12EA52221E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88405B72-767B-47F2-9B16-8F53AC9ED9DD}
+	EndGlobalSection
+EndGlobal
