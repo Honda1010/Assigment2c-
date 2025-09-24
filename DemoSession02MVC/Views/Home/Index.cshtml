@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    @* start header *@
+    <header class="mt-2">
+        <Center>
+            <nav>
+                <a href="/Home/Index" class="btn btn-primary m-2">Home</a>
+                <a href="/Home/Index" class="btn btn-warning m-2">privacy</a>
+                <a href="/Home/Index" class="btn btn-success m-2">Contact us</a>
+                <a href="/Home/Index" class="btn btn-secondary m-2">About As</a>
+            </nav>
+        </Center>
+    </header>
+    @* end header 
+
+
+    @* start Body *@
+    <section>
+        <center>
+            <div class="bg-primary mt-5 p-3 w-75">
+                <h1>Welcome to Home Page</h1>
+                <p>Route Academy</p>
+            </div>
+        </center>
+    </section>
+    @* end Body *@
+
+
+    @* start footer *@
+    <footer>
+        <center>copyright &copy; @DateTime.Now.Year</center>
+    </footer>
+
+    @* end footer *@
+
+
+
+
+</body>
+</html>
