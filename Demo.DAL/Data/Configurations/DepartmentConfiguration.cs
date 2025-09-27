@@ -1,0 +1,24 @@
+﻿global using Demo.DAL.Models;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+
+namespace Demo.DAL.Data.Configuration
+{
+	internal class DepartmentConfiguration : IEntityTypeConfiguration<Department>
+	{
+		public void Configure(EntityTypeBuilder<Department> builder)
+		{
+			builder.HasKey(d => d.Id);
+			builder.Property(d => d.Id).UseIdentityColumn(10,10);
+			builder.Property(d => d.Name).HasColumnType("varchar(20)");
+			builder.Property(d => d.Code).HasColumnType("varchar(20)");
+			builder.Property(d => d.Description).HasColumnType("varchar(200)");
+
+			builder.Property(d => d.CreatedOn).HasDefaultValueSql("GETDATE()");
+			builder.Property(d => d.LastModifiedOn).HasComputedColumnSql("GETDATE()");
+
+
+		}
+	}
+}
