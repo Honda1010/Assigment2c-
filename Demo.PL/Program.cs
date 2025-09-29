@@ -1,3 +1,7 @@
+using Demo.DAL.Data.DBContexts;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 namespace Demo.PL
 {
     public class Program
@@ -7,6 +11,10 @@ namespace Demo.PL
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddDbContext<ApplicationDBContext>(options => {
+                var ConString = builder.Configuration.GetConnectionString("DefaultConnection");
+                options.UseSqlServer(ConString);
+			});
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
