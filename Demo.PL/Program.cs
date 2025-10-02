@@ -1,6 +1,9 @@
+using Demo.DAL.Data;
 using Demo.DAL.Data.DBContexts;
+using Demo.DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+
 
 namespace Demo.PL
 {
@@ -15,6 +18,7 @@ namespace Demo.PL
                 var ConString = builder.Configuration.GetConnectionString("DefaultConnection");
                 options.UseSqlServer(ConString);
 			});
+            builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
