@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Demo.BL2.Services
 {
-	internal class DepartmentService(IDepartmentRepository _departmentRepository)
+	public class DepartmentService(IDepartmentRepository _departmentRepository) : IDepartmentService
 	{
 		public IEnumerable<DepartmentDto> GetAll()
 		{
@@ -55,6 +55,23 @@ namespace Demo.BL2.Services
 			//return new DepartmentDetailsDto(department);
 			// using factory method
 			return department.DepartmentToDepartmentDetailsDto();
+		}
+		public int Add(CreatedDepartmentDto createdDepartmentDto)
+		{
+			return _departmentRepository.Add(createdDepartmentDto.ToEntity());
+		}
+		public int Update(UpdatedDepartmentDto updatedDepartmentDto)
+		{
+			return _departmentRepository.Update(updatedDepartmentDto.ToEntity());
+		}
+		public bool Remove(int id)
+		{
+			var department = _departmentRepository.GetById(id);
+			if (department == null) return false;
+			else
+			{
+				return _departmentRepository.Remove(department) > 0;
+			}
 		}
 	}
 }

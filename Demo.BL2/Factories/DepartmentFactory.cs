@@ -50,5 +50,27 @@ namespace Demo.BL2.Factories
 				IsDeleted = department.IsDeleted
 			};
 		}
+		public static Department ToEntity(this CreatedDepartmentDto dto)
+		{
+			return new Department
+			{
+				Name = dto.Name,
+				Code = dto.Code,
+				Description = dto.Description,
+				CreatedOn = dto.DateOfCreation.ToDateTime(new TimeOnly(0, 0))
+			};
+
+		}
+		public static Department ToEntity(this UpdatedDepartmentDto dto)
+		{
+			return new Department
+			{
+				Id = dto.Id,
+				Name = dto.Name,
+				Code = dto.Code,
+				Description = dto.Description,
+				LastModifiedOn = dto.DateOfLastModification.ToDateTime(new TimeOnly(0, 0))
+			};
+		}
 	}
 }

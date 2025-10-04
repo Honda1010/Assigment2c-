@@ -1,16 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Demo.BL2.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.PL.Controllers
 {
-	public class DepartmentsController : Controller
+	public class DepartmentsController(IDepartmentService _departmentService) : Controller
 	{
-		public DepartmentsController()
-		{
-			// call the service
-		}
 		public IActionResult Index()
 		{
-			return View();
+			var departments = _departmentService.GetAll();
+			return View(departments);
 		}
 	}
 }
