@@ -30,8 +30,9 @@ namespace Demo.BL2.Services
 			return departmentDtos;
 		}
 
-		public DepartmentDetailsDto GetById(int id)
+		public DepartmentDetailsDto GetById(int? id)
 		{
+
 			var department = _departmentRepository.GetById(id);
 			if (department == null)
 			{

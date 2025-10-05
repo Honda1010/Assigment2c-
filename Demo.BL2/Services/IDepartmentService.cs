@@ -6,7 +6,7 @@ namespace Demo.BL2.Services
 	{
 		int Add(CreatedDepartmentDto createdDepartmentDto);
 		IEnumerable<DepartmentDto> GetAll();
-		DepartmentDetailsDto GetById(int id);
+		DepartmentDetailsDto GetById(int? id);
 		bool Remove(int id);
 		int Update(UpdatedDepartmentDto updatedDepartmentDto);
 	}

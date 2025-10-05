@@ -12,9 +12,9 @@ namespace Demo.DAL.Repositories
 	{
 		private readonly ApplicationDBContext _context = context;
 
-		public Department GetById(int id)
+		public Department GetById(int? id)
 		{
-			return _context.Departments.Find(id);
+			return _context.Departments.AsNoTracking().FirstOrDefault(d => d.Id == id);
 		}
 
 		public IEnumerable<Department> GetAll(bool withtracking = false)
