@@ -129,5 +129,48 @@ namespace Demo.PL.Controllers
 			}
 		}
 		#endregion
+		#region Delete
+
+		[HttpGet]
+		public IActionResult Delete(int? id)
+		{
+			if (!id.HasValue) return BadRequest();
+			var department = _departmentService.GetById(id);
+			if (department == null) return NotFound();
+			return View(department);
+		}
+		[HttpPost]
+		public IActionResult Delete(int id)
+		{
+			try
+			{
+				bool res = _departmentService.Remove(id);
+				if (res) return RedirectToAction("Index");
+				else
+				{
+					ModelState.AddModelError(String.Empty, "Faild to Delete Department");
+					var department = _departmentService.GetById(id);
+					return View(department);
+				}
+			}
+			catch (Exception ex)
+			{
+				if (_environment.IsDevelopment())
+				{
+					_logger.LogError(ex, "Error occurred while deleting a department.");
+					ModelState.AddModelError(string.Empty, ex.Message);
+					var department = _departmentService.GetById(id);
+					return View(department);
+				}
+				else
+				{
+					_logger.LogError(ex, "Error occurred while deleting a department.");
+					ModelState.AddModelError(string.Empty, "An error occurred while processing your request. Please try again later.");
+					var department = _departmentService.GetById(id);
+					return View(department);
+				}
+			}
+		}
+		#endregion
 	}
 }

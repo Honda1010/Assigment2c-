@@ -1,11 +1,14 @@
 ﻿
 
 
+using Demo.DAL.Data.Configurations;
+using Demo.DAL.Models.DepartmentModel;
+
 namespace Demo.DAL.Data.Configuration
 {
-	internal class DepartmentConfiguration : IEntityTypeConfiguration<Department>
+	internal class DepartmentConfiguration : BaseEntityConfiguration<Department>,IEntityTypeConfiguration<Department>
 	{
-		public void Configure(EntityTypeBuilder<Department> builder)
+		public new void Configure(EntityTypeBuilder<Department> builder)
 		{
 			builder.HasKey(d => d.Id);
 			builder.Property(d => d.Id).UseIdentityColumn(10,10);
@@ -13,9 +16,7 @@ namespace Demo.DAL.Data.Configuration
 			builder.Property(d => d.Code).HasColumnType("varchar(20)");
 			builder.Property(d => d.Description).HasColumnType("varchar(200)");
 
-			builder.Property(d => d.CreatedOn).HasDefaultValueSql("GETDATE()");
-			builder.Property(d => d.LastModifiedOn).HasComputedColumnSql("GETDATE()");
-
+			base.Configure(builder);
 
 		}
 	

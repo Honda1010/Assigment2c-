@@ -2,7 +2,7 @@
 using Demo.BL2.Factories;
 using Demo.DAL.Data.DBContexts;
 using Demo.DAL.Models;
-using Demo.DAL.Repositories;
+using Demo.DAL.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

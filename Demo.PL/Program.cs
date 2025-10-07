@@ -1,9 +1,10 @@
 
 using Demo.DAL.Data.DBContexts;
-using Demo.DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Demo.BL2.Services;
+using Demo.DAL.Repositories.Interfaces;
+using Demo.DAL.Repositories.Classes;
 
 
 namespace Demo.PL
@@ -16,7 +17,8 @@ namespace Demo.PL
 
             // Add services to the container.
             builder.Services.AddDbContext<ApplicationDBContext>(options => {
-				 //var ConString = builder.Configuration.GetSection("ConnectionStrings")["DefaultConnection"];
+				// get connection string from appsettings.json
+				//var ConString = builder.Configuration.GetSection("ConnectionStrings")["DefaultConnection"];
 				var ConString = builder.Configuration.GetConnectionString("DefaultConnection");
                 options.UseSqlServer(ConString);
 			});

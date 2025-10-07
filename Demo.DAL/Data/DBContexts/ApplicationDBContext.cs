@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Demo.DAL.Models.DepartmentModel;
+using Demo.DAL.Models.EmployeeModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,7 @@ namespace Demo.DAL.Data.DBContexts
 		//	optionsBuilder.UseSqlServer("Server=.;Database=DemoDB;Trusted_Connection=True;TrustServerCertificate=True;");
 		//}
 		public DbSet<Department> Departments { get; set; }
+		public DbSet<Employee> Employees { get; set; }
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDBContext).Assembly);
