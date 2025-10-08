@@ -1,5 +1,6 @@
 ﻿using Demo.BL2.DTOS;
-using Demo.BL2.Services;
+using Demo.BL2.DTOS.Department;
+using Demo.BL2.Services.Interfaces;
 using Demo.PL.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 

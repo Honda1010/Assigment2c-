@@ -19,11 +19,11 @@ namespace Demo.DAL.Repositories.Classes
 		{
 			if (withtracking)
 			{
-				return _context.Set<Tentity>().ToList();
+				return _context.Set<Tentity>().Where(entity => entity.IsDeleted==false).ToList();
 			}
 			else
 			{
-				return _context.Set<Tentity>().AsNoTracking().ToList();
+				return _context.Set<Tentity>().AsNoTracking().Where(entity => entity.IsDeleted==false).ToList();
 			}
 		}
 		public Tentity GetById(int? id)

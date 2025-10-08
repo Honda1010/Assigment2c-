@@ -1,4 +1,4 @@
-﻿using Demo.BL2.DTOS;
+﻿using Demo.BL2.DTOS.Department;
 using Demo.DAL.Models.DepartmentModel;
 using System;
 using System.Collections.Generic;

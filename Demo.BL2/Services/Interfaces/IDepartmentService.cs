@@ -1,6 +1,6 @@
-﻿using Demo.BL2.DTOS;
+﻿using Demo.BL2.DTOS.Department;
 
-namespace Demo.BL2.Services
+namespace Demo.BL2.Services.Interfaces
 {
 	public interface IDepartmentService
 	{

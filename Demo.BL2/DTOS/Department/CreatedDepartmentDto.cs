@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.BL2.DTOS
+namespace Demo.BL2.DTOS.Department
 {
 	public class CreatedDepartmentDto
 	{

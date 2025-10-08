@@ -1,5 +1,6 @@
-﻿using Demo.BL2.DTOS;
+﻿using Demo.BL2.DTOS.Department;
 using Demo.BL2.Factories;
+using Demo.BL2.Services.Interfaces;
 using Demo.DAL.Data.DBContexts;
 using Demo.DAL.Models;
 using Demo.DAL.Repositories.Interfaces;
@@ -9,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.BL2.Services
+namespace Demo.BL2.Services.Classes
 {
 	public class DepartmentService(IDepartmentRepository _departmentRepository) : IDepartmentService
 	{
