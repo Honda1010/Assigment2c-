@@ -7,6 +7,7 @@ using Demo.DAL.Repositories.Classes;
 using Demo.BL2.Services.Interfaces;
 using Demo.BL2.Services.Classes;
 using Demo.BL2.Mapping_Profiles;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace Demo.PL
@@ -22,14 +23,17 @@ namespace Demo.PL
 				// get connection string from appsettings.json
 				//var ConString = builder.Configuration.GetSection("ConnectionStrings")["DefaultConnection"];
 				var ConString = builder.Configuration.GetConnectionString("DefaultConnection");
-                options.UseSqlServer(ConString);
+                options.UseSqlServer(ConString).UseLazyLoadingProxies();
 			});
             builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             builder.Services.AddScoped<IDepartmentService, DepartmentService>();
             builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             builder.Services.AddScoped<IEmployeeService, EmployeeService>();
             builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfiles()));
-			builder.Services.AddControllersWithViews();
+			builder.Services.AddControllersWithViews(opt =>
+            {
+                opt.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()); // Global CSRF protection for all POST methods to prevent CSRF attacks 
+			});
 
             var app = builder.Build();
 

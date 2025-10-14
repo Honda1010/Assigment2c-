@@ -69,7 +69,7 @@ namespace Demo.BL2.Factories
 				Name = dto.Name,
 				Code = dto.Code,
 				Description = dto.Description,
-				LastModifiedOn = dto.DateOfLastModification.ToDateTime(new TimeOnly(0, 0))
+				CreatedOn = dto.DateOfCreation.ToDateTime(new TimeOnly(0, 0))
 			};
 		}
 	}

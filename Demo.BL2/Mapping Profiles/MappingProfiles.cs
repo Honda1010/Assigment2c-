@@ -13,9 +13,14 @@ namespace Demo.BL2.Mapping_Profiles
 	{
 		public MappingProfiles()
 		{
-			CreateMap<Employee,EmployeeDto>().ReverseMap();
+			CreateMap<Employee,EmployeeDto>()
+				.ForMember(dest => dest.department, opt => opt.MapFrom(src => src.Department.Name ?? null))
+				.ReverseMap();
 			CreateMap<Employee,CreatedEmployeeDto>().ReverseMap();
-			CreateMap<Employee,EmployeeDetailsDto>().ForMember(dest => dest.HiringDate, opt => opt.MapFrom(src => DateOnly.FromDateTime(src.HiringDate))).ReverseMap();
+			CreateMap<Employee,EmployeeDetailsDto>()
+				.ForMember(dest => dest.HiringDate, opt => opt.MapFrom(src => DateOnly.FromDateTime(src.HiringDate)))
+				.ForMember(dest => dest.department, opt => opt.MapFrom(src => src.Department.Name ?? null))
+				.ReverseMap();
 			CreateMap<CreatedEmployeeDto,Employee>().ForMember(dest => dest.HiringDate, opt => opt.MapFrom(src => src.HiringDate.ToDateTime(new TimeOnly()))).ReverseMap();
 			CreateMap<UpdatedEmployeeDto,Employee>().ForMember(dest => dest.HiringDate, opt => opt.MapFrom(src => src.HiringDate.ToDateTime(new TimeOnly()))).ReverseMap();
 

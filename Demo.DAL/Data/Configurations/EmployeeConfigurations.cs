@@ -22,6 +22,8 @@ namespace Demo.DAL.Data.Configurations
 			builder.Property(e => e.HiringDate).HasDefaultValueSql("GETDATE()").IsRequired();
 			builder.Property(e => e.Gender).HasConversion((empgender) => empgender.ToString(), (gender) => (Gender)Enum.Parse(typeof(Gender), gender));
 			builder.Property(e => e.EmployeeType).HasConversion((emptype) => emptype.ToString(), (emptype) => (EmployeeType)Enum.Parse(typeof(EmployeeType), emptype));
+			// RelationShip
+			builder.HasOne(e => e.Department).WithMany(d => d.Employees).HasForeignKey(e => e.DepartmentId).OnDelete(DeleteBehavior.SetNull);
 			base.Configure(builder);
 		}
 	}

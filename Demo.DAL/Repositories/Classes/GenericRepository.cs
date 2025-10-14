@@ -26,6 +26,10 @@ namespace Demo.DAL.Repositories.Classes
 				return _context.Set<Tentity>().AsNoTracking().Where(entity => entity.IsDeleted==false).ToList();
 			}
 		}
+		public IEnumerable<TResult> GetAll<TResult>(System.Linq.Expressions.Expression<Func<Tentity, TResult>> selector)
+		{
+			return _context.Set<Tentity>().Where(entity => entity.IsDeleted==false).Select(selector).ToList();
+		}
 		public Tentity GetById(int? id)
 		{
 			return _context.Set<Tentity>().AsNoTracking().FirstOrDefault(e => e.Id == id);

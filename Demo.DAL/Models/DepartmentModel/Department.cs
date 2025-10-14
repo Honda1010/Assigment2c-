@@ -1,4 +1,5 @@
-﻿using Demo.DAL.Models.Shared.Enum;
+﻿using Demo.DAL.Models.EmployeeModel;
+using Demo.DAL.Models.Shared.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,7 @@ namespace Demo.DAL.Models.DepartmentModel
 		public string Code { get; set; }
 		public string? Description { get; set; }
 
-	}
+		public virtual ICollection<Employee> Employees { get; set; }
+
+		}
 }

@@ -23,6 +23,22 @@ namespace Demo.BL2.Services.Classes
 		{
 			var employees = _employeeRepository.GetAll(WithTracking);
 			return _mapper.Map<IEnumerable<EmployeeDto>>(employees);
+			// Or use expression overloading to optimize data retrieval
+			#region ExpressionOverloadingGetall
+			//var employees = _employeeRepository.GetAll<EmployeeDto>(e => new EmployeeDto
+			//{
+			//	Id = e.Id,
+			//	Name = e.Name,
+			//	Email = e.Email,
+			//	Salary = e.Salary,
+			//	Age = e.Age,
+			//	Gender = e.Gender.ToString(),
+			//	EmployeeType = e.EmployeeType.ToString(),
+			//	IsActive = e.IsActive
+			//});
+			//return employees;
+			#endregion
+
 
 		}
 

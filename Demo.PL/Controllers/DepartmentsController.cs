@@ -12,6 +12,9 @@ namespace Demo.PL.Controllers
 		public IActionResult Index()
 		{
 			var departments = _departmentService.GetAll();
+			// example for viewdata and viewbag
+			ViewData["msg1"] = "hello from viewdata";
+			ViewBag.msg2 = "hello from viewbag";
 			return View(departments);
 		}
 		#region Create
@@ -21,19 +24,24 @@ namespace Demo.PL.Controllers
 				return View();
 		}
 		[HttpPost]
-		public IActionResult Create(CreatedDepartmentDto createdDepartmentDto)
+		public IActionResult Create(DepartmentViewModel viewModel)
 		{
 			if (ModelState.IsValid)
 			{
 				try
 				{
-					int res = _departmentService.Add(createdDepartmentDto);
-					if (res > 0) return RedirectToAction("Index");
-					else
+					var createdDepartmentDto = new CreatedDepartmentDto
 					{
-						ModelState.AddModelError(String.Empty, "Faild to Add Department");
-						return View(createdDepartmentDto);
-					}
+						Name = viewModel.Name,
+						Code = viewModel.Code,
+						Description = viewModel.Description,
+						DateOfCreation = viewModel.DateOfCreation
+					};
+					
+					int res = _departmentService.Add(createdDepartmentDto);
+					string message = res > 0 ? "Department Added Successfully" : "Faild to Add Department";
+					TempData["Message"] = message;
+					return RedirectToAction("Index");
 				}
 				catch (Exception ex)
 				{
@@ -41,20 +49,20 @@ namespace Demo.PL.Controllers
 					{
 						_logger.LogError(ex, "Error occurred while adding a department.");
 						ModelState.AddModelError(string.Empty, ex.Message);
-						return View(createdDepartmentDto);
+						return View(viewModel);
 					}
 					else
 					{
 						_logger.LogError(ex, "Error occurred while adding a department.");
 						ModelState.AddModelError(string.Empty, "An error occurred while processing your request. Please try again later.");
-						return View(createdDepartmentDto);
+						return View(viewModel);
 
 					}
 				}
 			}
 			else
 			{
-				return View(createdDepartmentDto);
+				return View(viewModel);
 
 			}
 		}
@@ -76,17 +84,17 @@ namespace Demo.PL.Controllers
 			if (id == null) return BadRequest();
 			var department = _departmentService.GetById(id);
 			if (department == null) return NotFound();
-			var ViewModel = new DepartmentEditViewModel
+			var ViewModel = new DepartmentViewModel
 			{
 				Name = department.Name,
 				Code = department.Code,
 				Description = department.Description,
-				DateOfLastModification = department.DateOfLastModification
+				DateOfCreation = department.DateOfCreation
 			};
 			return View(ViewModel);
 		}
 		[HttpPost]
-		public IActionResult Edit([FromRoute] int id, DepartmentEditViewModel departmentEditViewModel)
+		public IActionResult Edit([FromRoute] int id, DepartmentViewModel departmentEditViewModel)
 		{
 			if (ModelState.IsValid)
 			{
@@ -98,7 +106,7 @@ namespace Demo.PL.Controllers
 						Name = departmentEditViewModel.Name,
 						Code = departmentEditViewModel.Code,
 						Description = departmentEditViewModel.Description,
-						DateOfLastModification = departmentEditViewModel.DateOfLastModification  // to be replaced by the current user id
+						DateOfCreation = departmentEditViewModel.DateOfCreation
 					};
 					int res = _departmentService.Update(updatedDepartmentDto);
 					if (res > 0) return RedirectToAction("Index");

@@ -23,12 +23,25 @@ namespace Demo.PL.Controllers
 			return View();
 		}
 		[HttpPost]
-		public IActionResult Create(CreatedEmployeeDto createdEmployeeDto)
+		public IActionResult Create(EmployeeViewModel viewModel)
 		{
 			if (ModelState.IsValid)
 			{
 				try
 				{
+					var createdEmployeeDto = new CreatedEmployeeDto {
+						Name = viewModel.Name,
+						Address = viewModel.Address,
+						Email = viewModel.Email,
+						PhoneNumber = viewModel.PhoneNumber,
+						Age = viewModel.Age ?? 0,
+						IsActive = viewModel.IsActive,
+						Salary = viewModel.Salary,
+						HiringDate = viewModel.HiringDate,
+						Gender= viewModel.Gender,
+						EmployeeType= viewModel.EmployeeType,
+						DepartmentId= viewModel.DepartmentId
+					};
 					int res = _employeeService.AddEmployee(createdEmployeeDto);
 					if (res > 0) return RedirectToAction("Index");
 					else
@@ -43,19 +56,19 @@ namespace Demo.PL.Controllers
 					{
 						_logger.LogError(ex, "Error occurred while adding an employee.");
 						ModelState.AddModelError(string.Empty, ex.Message);
-						return View(createdEmployeeDto);
+						return View(viewModel);
 					}
 					else
 					{
 						_logger.LogError(ex, "Error occurred while adding an employee.");
 						ModelState.AddModelError(string.Empty, "An error occurred while processing your request. Please try again later.");
-						return View(createdEmployeeDto);
+						return View(viewModel);
 					}
 				}
 			}
 			else
 			{
-				return View(createdEmployeeDto);
+				return View(viewModel);
 			}
 		}
 		#endregion
@@ -77,9 +90,8 @@ namespace Demo.PL.Controllers
 			if (!id.HasValue) return BadRequest();
 			var employee = _employeeService.GetEmployeeById(id);
 			if (employee == null) return NotFound();
-			var dto = new UpdatedEmployeeDto
+			var dto = new EmployeeViewModel
 			{
-				Id = employee.Id,
 				Name = employee.Name,
 				Address= employee.Address,
 				Email= employee.Email,
@@ -91,16 +103,32 @@ namespace Demo.PL.Controllers
 				Gender= Enum.Parse<Gender>(employee.Gender),
 				EmployeeType= Enum.Parse<EmployeeType>(employee.EmployeeType)
 			};
+
 			return View(dto);
 		}
 		[HttpPost]
-		public IActionResult Edit([FromRoute] int id, UpdatedEmployeeDto dto) {
-			if (id != dto.Id)	return BadRequest();
+		public IActionResult Edit([FromRoute] int id, EmployeeViewModel viewModel) {
 			if (ModelState.IsValid)
 			{
 				try
 				{
-					int res = _employeeService.Update(dto);
+					var dto = new UpdatedEmployeeDto
+					{
+						Id = id,
+						Name = viewModel.Name,
+						Address = viewModel.Address,
+						Email = viewModel.Email,
+						PhoneNumber = viewModel.PhoneNumber,
+						Age = viewModel.Age ?? 0,
+						IsActive = viewModel.IsActive,
+						Salary = viewModel.Salary,
+						HiringDate = viewModel.HiringDate,
+						Gender = viewModel.Gender,
+						EmployeeType = viewModel.EmployeeType,
+						DepartmentId = viewModel.DepartmentId
+					};
+
+						int res = _employeeService.Update(dto);
 					if (res > 0) return RedirectToAction("Index");
 					else
 					{
@@ -114,19 +142,19 @@ namespace Demo.PL.Controllers
 					{
 						_logger.LogError(ex, "Error occurred while updating a department.");
 						ModelState.AddModelError(string.Empty, ex.Message);
-						return View(dto);
+						return View(viewModel);
 					}
 					else
 					{
 						_logger.LogError(ex, "Error occurred while updating a department.");
 						ModelState.AddModelError(string.Empty, "An error occurred while processing your request. Please try again later.");
-						return View(dto);
+						return View(viewModel);
 					}
 				}
 			}
 			else
 			{
-				return View(dto);
+				return View(viewModel);
 			}
 
 		}
