@@ -8,6 +8,7 @@ using Demo.BL2.Services.Interfaces;
 using Demo.BL2.Services.Classes;
 using Demo.BL2.Mapping_Profiles;
 using Microsoft.AspNetCore.Mvc;
+using Demo.BL2.Services.AttachmentService;
 
 
 namespace Demo.PL
@@ -29,7 +30,9 @@ namespace Demo.PL
             builder.Services.AddScoped<IDepartmentService, DepartmentService>();
             builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             builder.Services.AddScoped<IEmployeeService, EmployeeService>();
-            builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfiles()));
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<IAttachmentService, AttachmentService>();
+			builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfiles()));
 			builder.Services.AddControllersWithViews(opt =>
             {
                 opt.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()); // Global CSRF protection for all POST methods to prevent CSRF attacks 

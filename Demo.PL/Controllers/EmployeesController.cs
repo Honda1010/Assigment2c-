@@ -1,5 +1,6 @@
 ﻿using Demo.BL2.DTOS.Department;
 using Demo.BL2.DTOS.Employee;
+using Demo.BL2.Services.AttachmentService;
 using Demo.BL2.Services.Classes;
 using Demo.BL2.Services.Interfaces;
 using Demo.DAL.Models.EmployeeModel;
@@ -11,9 +12,9 @@ namespace Demo.PL.Controllers
 {
 	public class EmployeesController(IEmployeeService _employeeService,ILogger<EmployeesController> _logger,IWebHostEnvironment _environment) : Controller
 	{
-		public IActionResult Index()
+		public IActionResult Index(string? EmployeeSearchName)
 		{
-			var employees = _employeeService.GetAllEmployee();
+			var employees = _employeeService.GetAllEmployee(EmployeeSearchName);
 			return View(employees);
 		}
 		#region Create
@@ -40,7 +41,8 @@ namespace Demo.PL.Controllers
 						HiringDate = viewModel.HiringDate,
 						Gender= viewModel.Gender,
 						EmployeeType= viewModel.EmployeeType,
-						DepartmentId= viewModel.DepartmentId
+						DepartmentId= viewModel.DepartmentId,
+						image= viewModel.image
 					};
 					int res = _employeeService.AddEmployee(createdEmployeeDto);
 					if (res > 0) return RedirectToAction("Index");

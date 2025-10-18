@@ -3,6 +3,7 @@ using Demo.DAL.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,10 +11,9 @@ namespace Demo.DAL.Repositories.Classes
 {
 	public class GenericRepository<Tentity>(ApplicationDBContext _context):IGenaricRepository<Tentity> where Tentity : BaseEntity
 	{
-		public int Add(Tentity entity)
+		public void Add(Tentity entity)
 		{
 			_context.Set<Tentity>().Add(entity);
-			return _context.SaveChanges();
 		}
 		public IEnumerable<Tentity> GetAll(bool withtracking = false)
 		{
@@ -34,15 +34,26 @@ namespace Demo.DAL.Repositories.Classes
 		{
 			return _context.Set<Tentity>().AsNoTracking().FirstOrDefault(e => e.Id == id);
 		}
-		public int Update(Tentity entity)
+		public void Update(Tentity entity)
 		{
 			_context.Set<Tentity>().Update(entity);
-			return _context.SaveChanges();
 		}
-		public int Remove(Tentity entity)
+		public void Remove(Tentity entity)
 		{
 			_context.Set<Tentity>().Remove(entity);
-			return _context.SaveChanges();
+		}
+
+		public IEnumerable<Tentity> GetAllWithFilter(Expression<Func<Tentity, bool>> predicate, bool withtracking = false)
+		{
+			if (withtracking)
+			{
+				return _context.Set<Tentity>().Where(predicate).Where(i=>i.IsDeleted==false).ToList();
+			}
+			else
+			{
+				return _context.Set<Tentity>().AsNoTracking().Where(predicate).Where(i => i.IsDeleted == false).ToList();
+			}
+
 		}
 	}
 }

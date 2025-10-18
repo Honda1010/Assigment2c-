@@ -11,7 +11,7 @@ namespace Demo.BL2.Services.Interfaces
 	public interface IEmployeeService
 	{
 		int AddEmployee(CreatedEmployeeDto createdEmployeeDto);
-		IEnumerable<EmployeeDto> GetAllEmployee( bool WithTracking = false);
+		IEnumerable<EmployeeDto> GetAllEmployee(string? EmployeeSearchName , bool WithTracking = false);
 		EmployeeDetailsDto GetEmployeeById(int? id);
 		bool RemoveEmployee(int id);
 		int Update(UpdatedEmployeeDto updatedEmployeeDto);

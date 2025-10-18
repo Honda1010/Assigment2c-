@@ -9,14 +9,17 @@ namespace Demo.DAL.Repositories.Interfaces
 {
 	public interface IGenaricRepository<Tentiy> where Tentiy : BaseEntity
 	{
-		int Add(Tentiy entity);
+		void Add(Tentiy entity);
 		IEnumerable<Tentiy> GetAll(bool withtracking = false);
+
+		IEnumerable<Tentiy> GetAllWithFilter(Expression<Func<Tentiy,bool>> predicate, bool withtracking = false);
+
 
 		IEnumerable<TResult> GetAll<TResult>(Expression<Func<Tentiy,TResult>> selector);
 
 		Tentiy GetById(int? id);
-		int Remove(Tentiy entity);
-		int Update(Tentiy entity);
+		void Remove(Tentiy entity);
+		void Update(Tentiy entity);
 
 	}
 }

@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace Demo.BL2.Services.Classes
 {
-	public class DepartmentService(IDepartmentRepository _departmentRepository) : IDepartmentService
+	public class DepartmentService(IUnitOfWork _unitOfWork) : IDepartmentService
 	{
 		public IEnumerable<DepartmentDto> GetAll()
 		{
-			var departments = _departmentRepository.GetAll();
+			var departments = _unitOfWork.Departments.GetAll();
 			// manual mapping
 			//var departmentDtos = departments.Select(d => new DepartmentDto
 			//{
@@ -34,7 +34,7 @@ namespace Demo.BL2.Services.Classes
 		public DepartmentDetailsDto GetById(int? id)
 		{
 
-			var department = _departmentRepository.GetById(id);
+			var department = _unitOfWork.Departments.GetById(id);
 			if (department == null)
 			{
 				return null;
@@ -60,19 +60,23 @@ namespace Demo.BL2.Services.Classes
 		}
 		public int Add(CreatedDepartmentDto createdDepartmentDto)
 		{
-			return _departmentRepository.Add(createdDepartmentDto.ToEntity());
+			_unitOfWork.Departments.Add(createdDepartmentDto.ToEntity());
+			return _unitOfWork.SaveChanges();
 		}
 		public int Update(UpdatedDepartmentDto updatedDepartmentDto)
 		{
-			return _departmentRepository.Update(updatedDepartmentDto.ToEntity());
+			_unitOfWork.Departments.Update(updatedDepartmentDto.ToEntity());
+			return _unitOfWork.SaveChanges();
 		}
 		public bool Remove(int id)
 		{
-			var department = _departmentRepository.GetById(id);
+			var department = _unitOfWork.Departments.GetById(id);
 			if (department == null) return false;
 			else
 			{
-				return _departmentRepository.Remove(department) > 0;
+				_unitOfWork.Departments.Remove(department);
+
+				return _unitOfWork.SaveChanges() > 0;
 			}
 		}
 	}

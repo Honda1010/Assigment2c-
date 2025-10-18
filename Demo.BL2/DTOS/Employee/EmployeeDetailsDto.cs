@@ -26,5 +26,7 @@ namespace Demo.BL2.DTOS.Employee
 
 		public string? department { get; set; }
 		public int? DepartmentId { get; set; }
+		public string? ImageName { get; set; }
+
 	}
 }
