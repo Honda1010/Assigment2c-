@@ -1,5 +1,7 @@
 ﻿using Demo.DAL.Models.DepartmentModel;
 using Demo.DAL.Models.EmployeeModel;
+using Demo.DAL.Models.IdentityModels;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Demo.DAL.Data.DBContexts
 {
-	public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : DbContext(options)
+	public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : IdentityDbContext<ApplicationUser>(options)
 	{
 		//protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		//{

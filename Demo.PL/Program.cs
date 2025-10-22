@@ -9,6 +9,8 @@ using Demo.BL2.Services.Classes;
 using Demo.BL2.Mapping_Profiles;
 using Microsoft.AspNetCore.Mvc;
 using Demo.BL2.Services.AttachmentService;
+using Demo.DAL.Models.IdentityModels;
+using Microsoft.AspNetCore.Identity;
 
 
 namespace Demo.PL
@@ -32,7 +34,10 @@ namespace Demo.PL
             builder.Services.AddScoped<IEmployeeService, EmployeeService>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IAttachmentService, AttachmentService>();
-			builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfiles()));
+			builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfiles()));// AutoMapper configuration
+			builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDBContext>()
+                .AddDefaultTokenProviders(); // to enable features like password reset, email confirmation, etc.
 			builder.Services.AddControllersWithViews(opt =>
             {
                 opt.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()); // Global CSRF protection for all POST methods to prevent CSRF attacks 
@@ -57,7 +62,7 @@ namespace Demo.PL
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Account}/{action=Register}/{id?}");
 
             app.Run();
         }
